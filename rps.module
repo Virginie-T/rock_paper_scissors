@@ -85,7 +85,7 @@ function element_validate_string($element) {
     strtolower($element['#value']);
 
     if ($element['#value'] != 'rock' || 'paper' || 'scissors') {
-        form_error($element, t('Must be a valid choice. Don\'t bring a gun to a knife fight.'))
+        form_error($element, t('Must be a valid choice. Don\'t bring a gun to a knife fight.'));
     }
 }
 
