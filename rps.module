@@ -13,7 +13,7 @@ function rps_menu() {
         'page callback' => 'drupal_get_form',
         'page arguments' => array('rps_player2_form'),
         'access callback' => TRUE,
-        'type' => MENU_NORMAL_ITEM,
+        'type' => MENU_CALLBACK,
     );
     $items['success_rps'] = array(
         'title' => 'Success',
@@ -84,7 +84,7 @@ function element_validate_string($element) {
 
     strtolower($element['#value']);
 
-    if ($element['#value'] != 'rock' || 'paper' || 'scissors') {
+    if ($element['#value'] != ('rock' || 'paper' || 'scissors')) {
         form_error($element, t('Must be a valid choice. Don\'t bring a gun to a knife fight.'));
     }
 }
